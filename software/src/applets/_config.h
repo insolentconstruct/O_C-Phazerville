@@ -36,7 +36,7 @@ using namespace HS;
 #include "ClockSkip.h"
 #include "Combin8.h"
 #include "Compare.h"
-// #include "CVSeq.h"
+#include "CVSeq.h"
 #include "DivSeq.h"
 #include "DivSeq10.h"
 #include "DrumMap.h"
@@ -140,7 +140,7 @@ constexpr Registry reg = Registry<HemisphereApplet, HS::APPLET_SLOTS  // unused 
     , DeclareApplet<AttenuateOffset, 56, CAT_UTILITY>
     , DeclareApplet<Binary, 41, CAT_LOGIC | CAT_MODULATOR>
     , DeclareApplet<BitBeat, 79, CAT_MODULATOR>
-    // , DeclareApplet<BootsNCat, 55, CAT_OTHER>
+    , DeclareApplet<BootsNCat, 55, CAT_OTHER>
     , DeclareApplet<Brancher, 4, CAT_UTILITY | CAT_CLOCKING>
     , DeclareApplet<BugCrack, 51, CAT_OTHER>
     , DeclareApplet<Burst, 31, CAT_CLOCKING>
@@ -156,7 +156,7 @@ constexpr Registry reg = Registry<HemisphereApplet, HS::APPLET_SLOTS  // unused 
     , DeclareApplet<Compare, 30, CAT_UTILITY>
     , DeclareApplet<Cumulus, 5, CAT_LOGIC>
     , DeclareApplet<CVRecV2, 24, CAT_SEQUENCER>
-    // , DeclareApplet<CVSeq, 92, CAT_SEQUENCER>
+    , DeclareApplet<CVSeq, 92, CAT_SEQUENCER>
     , DeclareApplet<DivSeq, 68, CAT_SEQUENCER | CAT_CLOCKING>
     , DeclareApplet<DivSeq10, 80, CAT_SEQUENCER | CAT_CLOCKING>
     , DeclareApplet<DrLoFi, 16, CAT_OTHER>
@@ -192,7 +192,7 @@ constexpr Registry reg = Registry<HemisphereApplet, HS::APPLET_SLOTS  // unused 
     , DeclareApplet<Palimpsest, 20, CAT_SEQUENCER>
     , DeclareApplet<Panner, 100, CAT_UTILITY>
     , DeclareApplet<Pigeons, 71, CAT_SEQUENCER>
-    //, DeclareApplet<Piquet, 95, CAT_MODULATOR>
+    , DeclareApplet<Piquet, 95, CAT_MODULATOR>
     , DeclareApplet<PolyDiv, 72, CAT_SEQUENCER | CAT_CLOCKING>
     , DeclareApplet<Ponglet, 99, CAT_OTHER>
     , DeclareApplet<ProbabilityDivider, 59, CAT_CLOCKING>
