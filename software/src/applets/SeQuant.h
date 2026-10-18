@@ -166,14 +166,17 @@ public:
         // OUT2
         switch (currentOut2ModeId) {
           case Out2Mode::NOTE_TRIGGER:
-            GateOut(RIGHT_CH, currentPitch != previousPitch);
+            if (currentPitch != previousPitch)
+              ClockOut(RIGHT_CH);
             break;
           case Out2Mode::SCALE_TRIGGER:
-            GateOut(RIGHT_CH, currentScaleId != previousScaleId);
+            if (currentScaleId != previousScaleId)
+              ClockOut(RIGHT_CH);
             break;
           default:
           case Out2Mode::PROGRESSION_LOOPBACK_TRIGGER:
-            GateOut(RIGHT_CH, previousScaleId != 0 && currentScaleId == 0);
+            if (previousScaleId != 0 && currentScaleId == 0)
+              ClockOut(RIGHT_CH);
             break;
           case Out2Mode::ROOT:
             Out(RIGHT_CH, HS::QuantizerLookup(quantizerId, 64));
